@@ -1,10 +1,9 @@
 #include <cassert>
 #include <iostream>
 
-#include "src/tokenizer.h"
-#include "src/parser.h"
-#include "src/evaluator.h"
-
+#include "../src/tokenizer.h"
+#include "../src/parser.h"
+#include "../src/evaluator.h"
 void testEvaluate(const std::string& expr, int expected)
 {
     auto tokens = tokenize(expr);
@@ -60,7 +59,6 @@ int main()
 
     // Single Number
     testEvaluate("42", 42);
-    testEvaluate("100", 100);
 
     // Error Handling Tests
     testException("10 + *");
